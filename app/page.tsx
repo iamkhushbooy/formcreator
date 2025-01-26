@@ -15,7 +15,7 @@ export default function Home() {
         />
       </div>
       {/* Content Section */}
-      <div className="relative w-full h-screen flex justify-center items-center">
+      <div className="relative w-full h-screen flex justify-center">
         <AddField />
       </div>
     </div>

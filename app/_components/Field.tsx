@@ -47,8 +47,8 @@ const Field = () => {
 
   return (
     <div
-      className="bg-slate-50 border border-blue-200 w-[80%] h-[70%] rounded 
-      flex items-center flex-col md:w-[40%]"
+      className="bg-slate-50 border border-blue-200 w-[90%] h-[70%] rounded 
+      flex items-center flex-col md:w-[40%] mt-16"
     >
       <h1 className="font-semibold text-[22px] mt-5">Form Builder</h1>
       <button

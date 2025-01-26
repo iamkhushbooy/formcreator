@@ -1,5 +1,8 @@
 import transporter from "@/emailconfig";
-import { submitType } from "../form/[id]/page";
+export type SubmitType = {
+    key: string;
+    value: string | number;
+};
 
 const sendmail = async (email: string, id: string) => {
     const link = `${process.env.LINK}/${id}`;
@@ -12,7 +15,7 @@ const sendmail = async (email: string, id: string) => {
     });
 };
 
-export const sendResponse = async (fieldsave: submitType[], id: string, email: string) => {
+export const sendResponse = async (fieldsave: SubmitType[], id: string, email: string) => {
     try {
         const fieldsContent = fieldsave.map(field => `
             <p><strong>${field.key}</strong>: ${field.value}</p>
