@@ -3,7 +3,6 @@ export type SubmitType = {
     key: string;
     value: string | number;
 };
-
 const sendmail = async (email: string, id: string) => {
     const link = `${process.env.LINK}/${id}`;
     await transporter.sendMail({
@@ -14,7 +13,6 @@ const sendmail = async (email: string, id: string) => {
         html: `<a href="${link}">Your Link</a>` // Body content
     });
 };
-
 export const sendResponse = async (fieldsave: SubmitType[], id: string, email: string) => {
     try {
         const fieldsContent = fieldsave.map(field => `

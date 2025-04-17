@@ -62,10 +62,12 @@ const Page = () => {
                 _id: id
             });
             setFormSubmitted(true);
+
         } catch (error) {
             console.error("Error submitting form:", error);
         }
     };
+
 
     return (
         <>
@@ -102,16 +104,15 @@ const Page = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="relative w-[80%] h-[80px] flex items-center justify-between font-medium mx-[10%]">
+                    <div  className="relative w-[80%] h-[80px] flex items-center justify-between font-medium mx-[10%]">
                         <button
-                            onClick={submitForm}
-                            type="submit"
+                        onClick={submitForm}
+                            type='button'
                             className="text-[20px] px-5 text-white bg-purple-700 hover:bg-purple-900 rounded-md p-2"
                         >
                             Submit
                         </button>
                         <button
-                            type="button"
                             onClick={clearForm}
                             className="text-purple-900"
                         >
@@ -134,9 +135,7 @@ const Page = () => {
                     <p className='text-lg mt-3'>Thank you for your response.</p>
                 </div>
             )
-
             }
-
         </>
     );
 };
